@@ -48,15 +48,7 @@ $ . env/bin/activate
 (env) $ pip install -r requirements.txt
 ```
 
-### Install Requirements
+### Run server
 ```
-(env) $ python tetris.py
-```
-
-## Control keys
-```
-a (return): move piece left
-d (return): move piece right
-w (return): rotate piece counter clockwise
-s (return): rotate piece clockwise
+(env) experts$ python manage.py runserver
 ```
