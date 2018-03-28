@@ -1,7 +1,7 @@
 # Python Tetris Project
 
 ## Approach
-Implement a Django / ReactJS one page experts search small prototype. 
+Implement a Django / ReactJS one page experts search small prototype.
 
 ## Environment
 ```
