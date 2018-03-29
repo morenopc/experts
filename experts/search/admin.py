@@ -1,3 +1,7 @@
 from django.contrib import admin
+from search.models import Expert
 
-# Register your models here.
+
+class ExpertAdmin(admin.ModelAdmin):
+    pass
+admin.site.register(Expert, ExpertAdmin)
