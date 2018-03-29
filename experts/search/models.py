@@ -11,7 +11,7 @@ POPULARITY_CHOICES = (
 class Expert(models.Model):
     """Expert profile"""
 
-    picture = models.ImageField(default='static/img/default.jpeg')
+    picture = models.ImageField(default='default/profile.jpeg')
     name = models.CharField(max_length=64, default='Expert name')
     popularity = models.PositiveSmallIntegerField(
         choices=POPULARITY_CHOICES, default=0)
