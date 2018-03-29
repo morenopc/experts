@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.views.generic import ListView
+from search.models import Expert
 
-# Create your views here.
+
+class ExpertListView(ListView):
+    model = Expert
+    template_name = "search.html"
