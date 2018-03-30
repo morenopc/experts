@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load imagekit %}
+{% load search_tags %}
+
+{% block title %}Find an expert{% endblock title %}
+
+{% block content %}
+<div class="container text-green">
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-7">
+          <p><small><strong>{{ experts.count }} experts</strong> matching your search</small></p>
+        </div>
+        <div class="col-5 text-right">
+          <p><small>sort by 
+            <select class="custom-select col-md-5 border-0 text-green font-weight-bold">
+              {% for name in sort_by_list %}
+              {% if name == 'popularity' %}
+              <option value="{{ name }}" selected><b>{{ name|replace_underscore|title }}</b></option>
+              {% else %}
+              <option value="{{ name }}">{{ name|replace_underscore|title }}</option>
+              {% endif %}
+              {% endfor %}
+            </select>
+            <button type="button" class="btn btn-green-light"><img class="icon" src="{% static 'svg/plus.svg' %}"></button></strong>
+          </small></p>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+  {% for expert in experts %}
+  <div class="row">
+    <div class="col">
+    </div>
+    <div class="col-sm-10">
+      <div class="row box-shadow-green search-card">
+        <div class="col-sm-2">
+          {% thumbnail '70x70' expert.picture -- class="rounded-circle box-shadow-green" %}
+        </div>
+        <div class="col-sm-8">
+          <h6 class="text-green-dark">{{ expert.name }}</h6>
+          {% for start in "☆☆☆☆☆" %}
+            {% if expert.popularity > forloop.counter0 %}
+            <img class="icon" src="{% static 'svg/star.svg' %}">
+            {% else %}
+            <img class="icon" src="{% static 'svg/startransp.svg' %}">
+            {% endif %}
+          {% endfor %}
+          <small>{{ expert.hours_taught }} hours taught &bull; {{ expert.title }}, {{ expert.education }}</small>
+          <p>
+            <strong>{{ expert.description_title }}</strong><br>
+            <small>{{ expert.description|truncatechars:125 }}</small>
+          </p>
+        </div>
+        <div class="col-sm-2 actions">
+          <p class="text-green-light"><small>€ <span class="h4">{{ expert.hourly_rate }}</span> /h</small></p>
+          <button type="button" class="btn btn-success"><img class="icon" src="{% static 'svg/pencil.svg' %}"></button>
+          <button type="button" class="btn btn-danger"><img class="icon" src="{% static 'svg/trashcan.svg' %}"></button>
+        </div>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+  {% endfor %}
+  <!-- SEARCH FOOTER -->
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <p><small>You have viewed <strong>10 of 32 experts</strong></small></p><br>
+      <button type="button" class="btn btn-green-light">LOAD MORE</button>
+    </div>
+  </div>
+</div>
+{% endblock content %}
