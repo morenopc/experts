@@ -6,7 +6,7 @@ class ExpertListView(ListView):
     model = Expert
     queryset = model._default_manager.filter(is_active=True)
     context_object_name = 'experts'
-    template_name = "search.html"
+    template_name = "results.html"
     sort_by_list = [
         'name', 'popularity', 'hours_taught',
         'hourly_rate', 'created_at', 'updated_at']
