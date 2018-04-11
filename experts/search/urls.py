@@ -1,6 +1,10 @@
-from django.urls import path
-from search.views import ExpertListView
+from django.urls import path, include
+from rest_framework import routers
+from search.views import ExpertModelViewSet
+
+router = routers.DefaultRouter()
+router.register(r'experts', ExpertModelViewSet)
 
 urlpatterns = [
-    path('search/', ExpertListView.as_view()),
+    path('', include(router.urls))
 ]

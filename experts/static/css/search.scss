@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+$font-family:      'Varela Round', sans-serif;
+$green-lake-color: #02BE8C !default;
+$white:            #fff !default;
+$gray90:           #E5E5E5;
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+
+a {
+  color: $white;
+}
+
+/* TEXT COLORS */
+
+.text-green {
+  color: #79a99e;
+}
+
+.text-green-dark {
+  color: #447e70;
+}
+
+.text-green-light {
+  color: #02BE8C;
+}
+
+/* BUTTONS */
+
+.btn-success:hover {
+  background-color: #059B70;
+}
+
+.btn-green-light {
+  background-color: #ECFBF5;
+  color: #02BE8C;
+  font-size: 0.7rem;
+  &:hover {
+    background-color: #D9F4E9;
+  }
+}
+
+.bg-green-lake {
+  a {
+    opacity: 0.6;
+    filter: alpha(opacity = 50);
+    /* For IE8 and earlier */
+  }
+  background-color: #02BE8C;
+  color: $white;
+}
+
+.btn-success {
+  background-color: #02BE8C;
+  color: $white;
+}
+
+.bg-green-lake a {
+  &:hover, &.active {
+    opacity: 1;
+    filter: alpha(opacity = 100);
+    /* For IE8 and earlier */
+    color: $white;
+  }
+}
+
+.container {
+  .actions button {
+    border-radius: 0px;
+    border: 0px;
+  }
+  max-width: 960px;
+}
+
+.search-card {
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.border-top {
+  border-top: 1px solid $gray90;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $gray90;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+.box-shadow-green {
+  box-shadow: 0px 0px 30px 5px rgba(2, 190, 140, 0.15);
+}
+
+footer {
+  font-size: 0.7rem;
+}
+
+header {
+  font-size: 0.8rem;
+}
+
+.drop-shadow {
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.container.drop-shadow {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.icon {
+  display: inline-block;
+  vertical-align: text-top;
+}
