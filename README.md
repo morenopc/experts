@@ -1,4 +1,4 @@
-# Python Tetris Project
+# Experts
 
 ## Approach
 Implement a Django / ReactJS one page experts search small prototype.
