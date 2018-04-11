@@ -1,7 +1,7 @@
 # Experts
 
 ## Approach
-Implement a Django / ReactJS one page experts search small prototype.
+Implement a Django backend (Python 3.x) REST API to serve frontend ReactJS, Bootstrap, SCSS one page experts search small prototype.
 
 ## Environment
 ```
@@ -48,7 +48,13 @@ $ . env/bin/activate
 (env) $ pip install -r requirements.txt
 ```
 
-### Run server
+### Run django server
 ```
 (env) experts$ python manage.py runserver
+```
+
+
+### Run node server (other terminal)
+```
+frontend$ npm start
 ```
