@@ -1,6 +1,5 @@
-# Experts
-
-![Frontend](https://github.com/morenopc/experts/raw/master/frontend/public/img/2018-04-11-Selection-001.jpg "frontend")
+# Experts list
+Three days test prototype project
 
 ## Approach
 Implement a Django backend (Python 3.x) REST API to serve frontend ReactJS, Bootstrap, SCSS one page experts search small prototype.
@@ -60,3 +59,4 @@ $ . env/bin/activate
 ```
 frontend$ npm start
 ```
+![Frontend](https://github.com/morenopc/experts/raw/master/frontend/public/img/2018-04-11-Selection-001.jpg "frontend")
